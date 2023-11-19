@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(155, 110, 77);
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .image-container {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .text-container {
+    flex: 1;
+    text-align: center;
+  }
+
+  .appointment-form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 10px solid #100f0f;
+  }
+
+  .form-label {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .form-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .form-button {
+    background-color: rgb(155, 110, 77);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="client.jpeg" alt="TEAM">
+    </div>
+    <div class="text-container">
+      <h1>Clients</h1>
+      <p>Justice is not just a concept; it's our commitment to you.</p>
+      <div class="appointment-form">
+        <h2>Book an Appointment</h2>
+        <form id="appointment-form" onsubmit="sendEmail">
+          <label for="name" class="form-label">Your Name:</label>
+          <input type="text" id="name" name="name" class="form-input" required>
+          <label for="email" class="form-label">Email Address:</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+          <label for="date" class="form-label">Date and Time:</label>
+          <input type="datetime-local" id="date" name="date" class="form-input" required>
+          <button type="button" class="form-button" onclick="sendEmail()">Book Appointment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+     
+      
+      // Validate form data (you can add more validation)
+      if (!name || !email || !date) {
+        alert("Please fill in all fields.");
+        return;
+      }
+      
+      // Send the email using SMTP.js
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "Malikcdn10@gmail.com",
+        Password: "46B2B430290A9B87A979BF314368652958EA",
+        To: 'Malikcdn10@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: "Appointment Booking",
+        Body: `Name: ${name}<br>Email: ${email}<br>Date and Time: ${date}`,
+      }).then(function (message) {
+        alert("Mail has been sent successfully");
+      });
+    }
+  </script>
+</body>
+</html>

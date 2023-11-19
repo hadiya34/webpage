@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("K.jpeg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Place the background behind the content */
+}
+
+.tablink {
+  background-color: rgba(189, 160, 140, 0.594);
+  color: rgb(4, 4, 3);
+  display: right; /* Display tabs inline */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 19px 20px;
+  font-size: 17px;
+  position: relative;
+  float: left;
+  z-index: 3; /* Place tabs above the background */
+}
+
+.tablink:hover {
+  background-color: none;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color:rgb(64, 28, 2);
+  padding: 200px;
+  margin-right:20px;
+  margin-left:500px;
+  text-align: center;
+  position:relative;
+  z-index: 3; /* Place tab content above the background */
+}
+
+#TEAM {
+  background-color: brown;
+}
+
+#Pratice Area {
+  background-color: brown;
+}
+
+#clients {
+  background-color: brown;
+}
+
+#Insights {
+  background-color: brown;
+}
+
+/* CSS for the image */
+.image-container {
+  position: absolute;
+  top: 0;
+  margin-left: 1070px;
+
+  width: 10%; /* Adjust the width as needed */
+  z-index: 2; /* Place the image above the background */
+}
+
+.image-container img {
+  max-width: 130%;
+  height: auto;
+}
+p {
+    font-size: 30px; /* Adjust the font size as needed */
+  }
+  .contact-bar {
+      background-color:  rgb(155, 110, 77); /* Background color of the bar */
+      color: #000000; /* Text color */
+      text-align: center;
+      padding: 10px; /* Padding around the content */
+    }
+    .contact-info {
+      font-size: 16px;
+      margin: 5px 0; /* Margin between elements */
+    }
+</style>
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<!-- Insert the image on the right side -->
+<div class="image-container">
+  <img src="Add a heading.png" alt="Your Image" >
+</div>
+
+<div>
+  <a class="tablink" href="team.html">TEAM</a>
+  <a class="tablink" href="practice_areas.html">Practice Areas</a>
+  <a class="tablink" href="clients.html">Clients</a>
+  
+</div>
+
+<!-- Your text on top of the image -->
+<div class="tabcontent">
+  <p><b>LET US BE YOUR BRIDGE TO  A BRIGHTER FUTURE</b></p>
+</div>
+<div class="contact-bar">
+  <div class="contact-info">255 Butler Ave,Suite 204,Lancaster, Pennsylvania 17601</div>
+  <div class="contact-info">office-number: 223-529-8055</div>
+  <div class="contact-info">Email:malikcdn10@gmail.com</div>
+</div>
+</body>
+</html>
